@@ -3,6 +3,7 @@ package com.example.kotchaphan.snackbar;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,9 +21,12 @@ public class MainActivity extends AppCompatActivity {
         };
 
         final View coordinatorLayut = findViewById(R.id.snackbarPossition);
-        Snackbar.make(coordinatorLayut, "Hello SnackBar", Snackbar.LENGTH_LONG)
-                .setAction("undo", clickListener)
-                .show();
+//        Snackbar.make(coordinatorLayut, "Hello SnackBar", Snackbar.LENGTH_LONG)
+//                .setAction("undo", clickListener)
+//                .show();
+
+        Snackbar.make(coordinatorLayut, Html.fromHtml("Add <b>bold</b> to Snackbar text"), Snackbar.LENGTH_LONG).show();
+
     }
 
 }
